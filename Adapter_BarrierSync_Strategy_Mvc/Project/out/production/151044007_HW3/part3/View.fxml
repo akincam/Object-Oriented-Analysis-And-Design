@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="428.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="part3.Controller">
+   <children>
+       <ComboBox fx:id="matrixLength" layoutX="108.0" layoutY="24.0" onAction="#comboAction" prefWidth="150.0" promptText="Matrix Length">
+       <items>
+           <FXCollections fx:factory="observableArrayList">
+               <String fx:value="4" />
+               <String fx:value="8" />
+               <String fx:value="16" />
+               <String fx:value="32" />
+               <String fx:value="64" />
+               <String fx:value="128" />
+               <String fx:value="256" />
+               <String fx:value="512" />
+               <String fx:value="1024" />
+               <String fx:value="2048" />
+               <String fx:value="4096" />
+               <String fx:value="8192" />
+           </FXCollections>
+       </items>
+       </ComboBox>
+       <ComboBox fx:id="threadSize" layoutX="281.0" layoutY="24.0" opacity="0.88" prefWidth="150.0" promptText="Thread Size">
+
+       </ComboBox>
+       <ComboBox fx:id="mtd" layoutX="458.0" layoutY="23.0" prefHeight="26.0" prefWidth="269.0" promptText="Method">
+       <items>
+           <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Method1(no mutex - monitor)" />
+               <String fx:value="Method2(mutex and monitor)" />
+           </FXCollections>
+       </items>
+       </ComboBox>
+      <Button fx:id="startButton" layoutX="108.0" layoutY="85.0" mnemonicParsing="false" onAction="#startMethod" prefHeight="26.0" prefWidth="79.0" text="Start" />
+      <TextArea fx:id="textArea" layoutX="108.0" layoutY="200.0" prefHeight="200.0" prefWidth="599.0" />
+      <Button fx:id="stopButton" layoutX="108.0" layoutY="134.0" mnemonicParsing="false" onAction="#stopMethod" prefHeight="26.0" prefWidth="79.0" text="Cancel" />
+      <Label layoutX="346.0" layoutY="173.0" prefHeight="26.0" prefWidth="122.0" text="      Result of DFS" />
+      <TextArea fx:id="timeText" layoutX="307.0" layoutY="79.0" prefHeight="26.0" prefWidth="200.0" />
+      <TextArea  fx:id="beforeText" layoutX="307.0" layoutY="128.0" prefHeight="6.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
